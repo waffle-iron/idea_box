@@ -1,0 +1,10 @@
+<div class="idea-form">
+
+  <%= form_for :idea, url: {controller:'public', action:=>action} do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_field :body %>
+    <%#= f.collection_select :idea, @qualities, include_blank: "Rate Quality of Idea" %>
+    <%= f.input :quality, :as => :select, :collection => Idea.qualities %>
+    <%= f.submit message, class: "btn btn-primary"%>
+
+</div>
