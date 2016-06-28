@@ -4,7 +4,6 @@ class CreateIdeas < ActiveRecord::Migration
       t.string :title
       t.string :body
       t.integer :quality, default: 0
-      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end

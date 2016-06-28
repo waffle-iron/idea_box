@@ -20,17 +20,8 @@ ActiveRecord::Schema.define(version: 20160627191919) do
     t.string   "title"
     t.string   "body"
     t.integer  "quality",    default: 0
-    t.integer  "user_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
-  add_index "ideas", ["user_id"], name: "index_ideas_on_user_id", using: :btree
-
-  create_table "users", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_foreign_key "ideas", "users"
 end

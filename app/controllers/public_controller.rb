@@ -1,7 +1,5 @@
 class PublicController < ApplicationController
   def index
-    @user = User.find(params[:id])
-    @ideas = @user.ideas
-    @qualities = @user.qualities
+    @ideas = Idea.all
   end
 end

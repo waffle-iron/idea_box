@@ -3,9 +3,9 @@
   <h3>Ideas:</h3>
   <% @ideas.each do |idea| %>
 
-  <%= idea.title %>
-  <%= truncate(idea.body, length: 100) %>
-  <%= idea.quality %>
+    <%= idea.title %>
+    <%= truncate(idea.body, length: 100) %>
+    <%= idea.quality %>
 
   <% end %>
 </div>
